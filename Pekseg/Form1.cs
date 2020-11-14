@@ -123,7 +123,7 @@ namespace Pekseg
                     seged += String.Format("Átlagos ár: " + Math.Round(peksegLista[peksegIndexe].PekarukAtlagosAra(), 2) + " Ft\n");
                     seged += String.Format("Legolcsóbb termék: " + peksegLista[peksegIndexe].Termekek[peksegLista[peksegIndexe].LegolcsobbTermek()].ToString() + "\n");
                     seged += String.Format("Legdrágább termék: " + peksegLista[peksegIndexe].Termekek[peksegLista[peksegIndexe].LegdragabbTermek()].ToString() + "\n");
-                    seged += String.Format("Laktózmentes termék: " + peksegLista[peksegIndexe].LaktozmentesPekaruk() + "db, " + Math.Round(((double)peksegLista[peksegIndexe].LaktozmentesPekaruk() / (double)peksegLista[peksegIndexe].Termekek.Count * 100.00), 2) + "%\n");
+                    seged += String.Format("Laktózmentes termék: " + peksegLista[peksegIndexe].LaktozmentesPekaruk() + " db, " + Math.Round(((double)peksegLista[peksegIndexe].LaktozmentesPekaruk() / (double)peksegLista[peksegIndexe].Termekek.Count * 100.00), 2) + "%\n");
                 }
                 labelStatisztika.Text = seged;
             }
