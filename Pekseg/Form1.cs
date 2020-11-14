@@ -18,6 +18,9 @@ namespace Pekseg
             Pekaru p1 = new Pekaru("Pogácsa", 50, false);
             label1.Text = p1.ToString();
 
+            Pekseg pk1 = new Pekseg("Kovács pékség",new List<Pekaru>(),DateTime.Now);
+            label1.Text = pk1.ToString();
+
         }
     }
 }
