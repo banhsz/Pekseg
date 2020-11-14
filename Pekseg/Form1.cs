@@ -15,6 +15,9 @@ namespace Pekseg
         public Form1()
         {
             InitializeComponent();
+            Pekaru p1 = new Pekaru("Pogácsa", 50, false);
+            label1.Text = p1.ToString();
+
         }
     }
 }
