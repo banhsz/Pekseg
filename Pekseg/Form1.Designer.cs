@@ -31,11 +31,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.buttonPekaruPekseghezFelvetele = new System.Windows.Forms.Button();
+            this.listBoxPeksegPekaruk = new System.Windows.Forms.ListBox();
+            this.listBoxPeksegek = new System.Windows.Forms.ListBox();
+            this.buttonPeksegHozzaadas = new System.Windows.Forms.Button();
+            this.textBoxPeksegNevInput = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonPekaruTorles = new System.Windows.Forms.Button();
             this.numericUpDownPekaruArInput = new System.Windows.Forms.NumericUpDown();
@@ -78,11 +78,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.listBox3);
-            this.groupBox2.Controls.Add(this.listBox2);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.buttonPekaruPekseghezFelvetele);
+            this.groupBox2.Controls.Add(this.listBoxPeksegPekaruk);
+            this.groupBox2.Controls.Add(this.listBoxPeksegek);
+            this.groupBox2.Controls.Add(this.buttonPeksegHozzaadas);
+            this.groupBox2.Controls.Add(this.textBoxPeksegNevInput);
             this.groupBox2.Location = new System.Drawing.Point(7, 158);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(755, 236);
@@ -90,46 +90,49 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pékségek";
             // 
-            // button3
+            // buttonPekaruPekseghezFelvetele
             // 
-            this.button3.Location = new System.Drawing.Point(605, 187);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonPekaruPekseghezFelvetele.Location = new System.Drawing.Point(605, 187);
+            this.buttonPekaruPekseghezFelvetele.Name = "buttonPekaruPekseghezFelvetele";
+            this.buttonPekaruPekseghezFelvetele.Size = new System.Drawing.Size(75, 23);
+            this.buttonPekaruPekseghezFelvetele.TabIndex = 4;
+            this.buttonPekaruPekseghezFelvetele.Text = "+";
+            this.buttonPekaruPekseghezFelvetele.UseVisualStyleBackColor = true;
+            this.buttonPekaruPekseghezFelvetele.Click += new System.EventHandler(this.buttonPekaruPekseghezFelvetele_Click);
             // 
-            // listBox3
+            // listBoxPeksegPekaruk
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(537, 20);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(212, 147);
-            this.listBox3.TabIndex = 3;
+            this.listBoxPeksegPekaruk.FormattingEnabled = true;
+            this.listBoxPeksegPekaruk.Location = new System.Drawing.Point(537, 20);
+            this.listBoxPeksegPekaruk.Name = "listBoxPeksegPekaruk";
+            this.listBoxPeksegPekaruk.Size = new System.Drawing.Size(212, 147);
+            this.listBoxPeksegPekaruk.TabIndex = 3;
             // 
-            // listBox2
+            // listBoxPeksegek
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(193, 20);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(337, 199);
-            this.listBox2.TabIndex = 2;
+            this.listBoxPeksegek.FormattingEnabled = true;
+            this.listBoxPeksegek.Location = new System.Drawing.Point(193, 20);
+            this.listBoxPeksegek.Name = "listBoxPeksegek";
+            this.listBoxPeksegek.Size = new System.Drawing.Size(337, 199);
+            this.listBoxPeksegek.TabIndex = 2;
+            this.listBoxPeksegek.SelectedIndexChanged += new System.EventHandler(this.listBoxPeksegek_SelectedIndexChanged);
             // 
-            // button2
+            // buttonPeksegHozzaadas
             // 
-            this.button2.Location = new System.Drawing.Point(7, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonPeksegHozzaadas.Location = new System.Drawing.Point(7, 47);
+            this.buttonPeksegHozzaadas.Name = "buttonPeksegHozzaadas";
+            this.buttonPeksegHozzaadas.Size = new System.Drawing.Size(75, 23);
+            this.buttonPeksegHozzaadas.TabIndex = 1;
+            this.buttonPeksegHozzaadas.Text = "Hozzáadás";
+            this.buttonPeksegHozzaadas.UseVisualStyleBackColor = true;
+            this.buttonPeksegHozzaadas.Click += new System.EventHandler(this.buttonPeksegHozzaadas_Click);
             // 
-            // textBox3
+            // textBoxPeksegNevInput
             // 
-            this.textBox3.Location = new System.Drawing.Point(7, 20);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 0;
+            this.textBoxPeksegNevInput.Location = new System.Drawing.Point(7, 20);
+            this.textBoxPeksegNevInput.Name = "textBoxPeksegNevInput";
+            this.textBoxPeksegNevInput.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPeksegNevInput.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -260,11 +263,11 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button buttonPekaruPekseghezFelvetele;
+        private System.Windows.Forms.ListBox listBoxPeksegPekaruk;
+        private System.Windows.Forms.ListBox listBoxPeksegek;
+        private System.Windows.Forms.Button buttonPeksegHozzaadas;
+        private System.Windows.Forms.TextBox textBoxPeksegNevInput;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBoxPekaruk;
         private System.Windows.Forms.Button buttonPekaruHozzaadas;
