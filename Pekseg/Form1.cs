@@ -118,10 +118,13 @@ namespace Pekseg
                 seged += String.Format(peksegLista[peksegIndexe].Nev + "\n");
                 seged += String.Format("Alapítva: " + peksegLista[peksegIndexe].Alapitva.ToString("yyyy. MM. dd")+"\n\n");
                 seged += String.Format("Pékáruk: " + peksegLista[peksegIndexe].Termekek.Count()+" db\n");
-                seged += String.Format("Átlagos ár: " + Math.Round(peksegLista[peksegIndexe].PekarukAtlagosAra(),2)+ " Ft\n");
-                seged += String.Format("Legolcsóbb termék: " + peksegLista[peksegIndexe].Termekek[peksegLista[peksegIndexe].LegolcsobbTermek()].ToString() + "\n");
-                seged += String.Format("Legdrágább termék: " + peksegLista[peksegIndexe].Termekek[peksegLista[peksegIndexe].LegdragabbTermek()].ToString() + "\n");
-                seged += String.Format("Laktózmentes termék: " + peksegLista[peksegIndexe].LaktozmentesPekaruk()+"db, " + ((double)peksegLista[peksegIndexe].LaktozmentesPekaruk()/(double)peksegLista[peksegIndexe].Termekek.Count*100.00) +"%\n");
+                if (peksegLista[peksegIndexe].Termekek.Count>0)
+                {
+                    seged += String.Format("Átlagos ár: " + Math.Round(peksegLista[peksegIndexe].PekarukAtlagosAra(), 2) + " Ft\n");
+                    seged += String.Format("Legolcsóbb termék: " + peksegLista[peksegIndexe].Termekek[peksegLista[peksegIndexe].LegolcsobbTermek()].ToString() + "\n");
+                    seged += String.Format("Legdrágább termék: " + peksegLista[peksegIndexe].Termekek[peksegLista[peksegIndexe].LegdragabbTermek()].ToString() + "\n");
+                    seged += String.Format("Laktózmentes termék: " + peksegLista[peksegIndexe].LaktozmentesPekaruk() + "db, " + Math.Round(((double)peksegLista[peksegIndexe].LaktozmentesPekaruk() / (double)peksegLista[peksegIndexe].Termekek.Count * 100.00), 2) + "%\n");
+                }
                 labelStatisztika.Text = seged;
             }
         }
